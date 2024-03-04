@@ -4,3 +4,13 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.AssemblyInfo.cs
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.csproj.CoreCompileInputs.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.sourcelink.json
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.deps.json
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\bin\Debug\net8.0\AKM.Server.Infrastructure.Contracts.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\bin\Debug\net8.0\AKM.Server.Infrastructure.Contracts.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.csproj.CopyComplete
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\refint\AKM.Server.Infrastructure.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\ref\AKM.Server.Infrastructure.Impl.dll

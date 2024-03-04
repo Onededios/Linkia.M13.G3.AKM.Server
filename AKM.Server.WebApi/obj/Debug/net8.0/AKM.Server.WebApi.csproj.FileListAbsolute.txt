@@ -38,3 +38,9 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Contracts.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Infrastructure.Contracts.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Contracts.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Impl.pdb

@@ -2,12 +2,6 @@
 using AKM.Server.Infrastructure.Contracts.Repositories;
 using AKM.Server.Infrastructure.Impl.Context;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Query;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AKM.Server.Infrastructure.Impl.Repositories
 {

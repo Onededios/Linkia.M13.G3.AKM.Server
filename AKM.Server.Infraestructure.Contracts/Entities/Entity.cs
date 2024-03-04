@@ -8,7 +8,7 @@ namespace AKM.Server.Infrastructure.Contracts.Entities
 {
     public abstract class Entity
     {
-        public Guid Id { get; set; }
-        protected Entity() => Id = Guid.NewGuid();
+        public Guid id { get; set; }
+        protected Entity() => id = Guid.NewGuid();
     }
 }

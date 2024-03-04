@@ -1,24 +1,24 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
+﻿using AKM.Server.Infrastructure.Contracts.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace AKM.Server.Infrastructure.Impl.Context
 {
     public class DatabaseContext : DbContext
     {
-        private readonly bool _isRelationalDb = false;
+        private readonly bool _isRelationalDb;
         private readonly IConfiguration _configuration;
+
+        public DbSet<Password> passwords { get; set; }
 
         public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration, bool isRelationalDb = true)
         {
             _isRelationalDb = isRelationalDb;
             _configuration = configuration;
         }
-        public bool IsRelationalDb { get { return _isRelationalDb; } }
+
+        public bool IsRelationalDb => _isRelationalDb;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,7 +27,7 @@ namespace AKM.Server.Infrastructure.Impl.Context
             if (_isRelationalDb)
             {
                 var connectionString = _configuration.GetConnectionString("PostgreSQLConnection");
-                optionsBuilder.LogTo(message => Debug.WriteLine(message));
+                optionsBuilder.UseNpgsql(connectionString);
             }
             optionsBuilder.LogTo(message => Debug.WriteLine(message));
         }
