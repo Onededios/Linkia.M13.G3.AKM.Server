@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.Library.Impl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9b903ed069df87402571fe89c62c7860b4a0fc3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e127298948db86a4dc1dd1d9a032af41481779a0")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.Library.Impl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.Library.Impl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

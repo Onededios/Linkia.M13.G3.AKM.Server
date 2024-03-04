@@ -1,0 +1,6 @@
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.csproj.AssemblyReference.cache
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.AssemblyInfoInputs.cache
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.AssemblyInfo.cs
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.csproj.CoreCompileInputs.cache
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infraestructure.Impl\obj\Debug\net8.0\AKM.Server.Infrastructure.Impl.sourcelink.json

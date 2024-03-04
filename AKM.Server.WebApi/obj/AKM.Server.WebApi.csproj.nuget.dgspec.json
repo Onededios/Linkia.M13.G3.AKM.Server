@@ -4,14 +4,14 @@
     "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj": {
+    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj",
-        "projectName": "AKM.Server.WebApi",
-        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj",
+        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj",
+        "projectName": "AKM.Server.Infrastructure.Contracts",
+        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj",
         "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
-        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\obj\\",
+        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,293 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\AKM.Server.Infrastructure.Impl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\AKM.Server.Infrastructure.Impl.csproj",
+        "projectName": "AKM.Server.Infrastructure.Impl",
+        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\AKM.Server.Infrastructure.Impl.csproj",
+        "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj",
+        "projectName": "AKM.Server.Library.Contracts",
+        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj",
+        "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\AKM.Server.Library.Impl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\AKM.Server.Library.Impl.csproj",
+        "projectName": "AKM.Server.Library.Impl",
+        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\AKM.Server.Library.Impl.csproj",
+        "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj"
+              },
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj",
+        "projectName": "AKM.Server.WebApi",
+        "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\AKM.Server.WebApi.csproj",
+        "packagesPath": "C:\\Users\\Joel\\.nuget\\packages\\",
+        "outputPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Joel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Contracts\\AKM.Server.Infrastructure.Contracts.csproj"
+              },
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\AKM.Server.Infrastructure.Impl.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Infraestructure.Impl\\AKM.Server.Infrastructure.Impl.csproj"
+              },
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Contracts\\AKM.Server.Library.Contracts.csproj"
+              },
+              "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\AKM.Server.Library.Impl.csproj": {
+                "projectPath": "C:\\repos\\Linkia.M13.G3.AKM.Server\\AKM.Server.Library.Impl\\AKM.Server.Library.Impl.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": {
               "target": "Package",
               "version": "[1.19.5, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
