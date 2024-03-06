@@ -1,0 +1,12 @@
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\bin\Debug\net8.0\AKM.Server.Core.Impl.deps.json
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\bin\Debug\net8.0\AKM.Server.Core.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\bin\Debug\net8.0\AKM.Server.Core.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.GeneratedMSBuildEditorConfig.editorconfig
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.AssemblyInfoInputs.cache
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.AssemblyInfo.cs
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.csproj.CoreCompileInputs.cache
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.sourcelink.json
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\refint\AKM.Server.Core.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\AKM.Server.Core.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Core.Impl\obj\Debug\net8.0\ref\AKM.Server.Core.Impl.dll

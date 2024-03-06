@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.WebApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9fcc4c0583ff67f67a7faeb529aec02d699c241")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+776cf446d30666f4acce4cb8279737d2371608f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.WebApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.WebApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

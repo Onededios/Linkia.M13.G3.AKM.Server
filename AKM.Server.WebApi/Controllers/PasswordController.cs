@@ -1,4 +1,5 @@
-﻿using AKM.Server.Library.Contracts.Services;
+﻿using AKM.Server.Library.Contracts.DTOs;
+using AKM.Server.Library.Contracts.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Net;
 
@@ -33,15 +34,31 @@ namespace AKM.Server.WebApi.Controllers
         [Produces("application/json")]
         public async Task<ActionResult> GoGetPassword(Guid password)
         {
-            try 
+            try
             {
                 var response = await _passwordService.GetPasswordAsync(password);
                 if (response == null) throw new Exception("Password is null");
                 return Ok(response);
             }
-            catch (Exception ex) 
+            catch (Exception ex) { return Problem(detail: ex.Message, statusCode: 400); }
+        }
+
+        [HttpGet]
+        [Route("GetUserPasswords")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [Produces("application/json")]
+        public async Task<ActionResult> GoGetUserPasswords(Guid user)
+        {
+            try { 
+                var response = await _passwordService.GetPasswordsByUserAsync(user);
+                if (response == null) throw new Exception("User is null");
+                return Ok(response);
+            }
+            catch (Exception ex)
             {
-                return Problem(detail: ex.Message, statusCode: 400);
+                return StatusCode((int)HttpStatusCode.InternalServerError);
             }
         }
 
@@ -51,10 +68,17 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task GoCreatePassword()
+        public async Task<IActionResult> GoCreatePassword([FromBody] CreatePassword request)
         {
-            try { }
-            catch (Exception ex) { }
+            try {
+                var result = await _passwordService.CreatePasswordAsync(request);
+                if (result) return Ok(result);
+                return BadRequest("Password creation failed");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError);
+            }
         }
 
         [HttpPut]
