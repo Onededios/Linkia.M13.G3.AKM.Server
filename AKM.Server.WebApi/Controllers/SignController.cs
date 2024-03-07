@@ -14,10 +14,21 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task GoSignIn(string username, string password)
+        public async Task GoSignIn()
         {
             try { }
             catch (Exception ex) { }
+        }
+
+        [HttpPost]
+        [Route("SignUp")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [Produces("application/json")]
+        public async Task GoSignUp()
+        {
+            
         }
     }
 }

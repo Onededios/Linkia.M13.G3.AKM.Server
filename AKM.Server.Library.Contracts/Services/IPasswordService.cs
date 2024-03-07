@@ -12,6 +12,7 @@ namespace AKM.Server.Library.Contracts.Services
     {
         Task<Password> GetPasswordAsync(Guid id);
         Task<List<Password>?> GetPasswordsByUserAsync(Guid userId);
-        Task<bool> CreatePasswordAsync(CreatePassword passwordObj);
+        Task<bool> CreatePasswordAsync(CreatePasswordDTO passwordObj);
+        Task<bool> UpdatePasswordAsync(UpdatePasswordDTO passwordObj);
     }
 }

@@ -27,9 +27,9 @@ CREATE TABLE passwords (
     id_app UUID REFERENCES apps(id), 
     id_tag UUID REFERENCES tags(id),
     password TEXT,
-    date_creation DATE, 
-    date_expiration DATE, 
-    date_updated DATE 
+    date_creation TIMESTAMP, 
+    date_expiration TIMESTAMP, 
+    date_updated TIMESTAMP 
 ); 
 
 CREATE TABLE alerts (
@@ -37,7 +37,7 @@ CREATE TABLE alerts (
     id_user UUID REFERENCES users(id),
     id_password UUID REFERENCES passwords(id), 
     message VARCHAR(45), 
-    date_alert DATE 
+    date_alert TIMESTAMP 
 );
 
 CREATE TABLE apps_has_tags ( 
@@ -55,7 +55,7 @@ CREATE TABLE passwords_has_tags (
 CREATE TABLE history_passwords ( 
     id  UUID PRIMARY KEY,
     id_password UUID REFERENCES passwords(id),
-    update_date DATE,
+    update_date TIMESTAMP,
     description_modification TEXT,
     old_password TEXT
 );

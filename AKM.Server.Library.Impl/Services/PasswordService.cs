@@ -1,25 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using AKM.Server.Infrastructure.Contracts.Entities;
+﻿using AKM.Server.Infrastructure.Contracts.Entities;
 using AKM.Server.Infrastructure.Contracts.Repositories;
-using AKM.Server.Library.Contracts;
 using AKM.Server.Library.Contracts.DTOs;
 using AKM.Server.Library.Contracts.Services;
+using AKM.Server.Library.Impl.Helpers;
 
 namespace AKM.Server.Library.Impl.Services
 {
     public class PasswordService : IPasswordService
     {
         private readonly IPasswordRepository _passwordRepository;
+        private readonly DateTime lastAvailableDate = DateTime.Parse("9999/12/31");
 
         public PasswordService(IPasswordRepository passwordRepository) => _passwordRepository = passwordRepository;
 
         public async Task<Password?> GetPasswordAsync(Guid id) => await _passwordRepository.GetPasswordAsync(id);
         public async Task<List<Password>?> GetPasswordsByUserAsync(Guid userId) => await _passwordRepository.GetPasswordsByUserAsync(userId);
-        public async Task<bool> CreatePasswordAsync(CreatePassword passwordObj)
+        public async Task<bool> CreatePasswordAsync(CreatePasswordDTO passwordObj)
         {
             try
             {
@@ -32,7 +28,7 @@ namespace AKM.Server.Library.Impl.Services
                     password = passwordObj.password,
                     date_creation = DateTime.UtcNow,
                     date_updated = DateTime.UtcNow,
-                    date_expiration = passwordObj.expiracy_date != null ? DateTime.Parse(passwordObj.expiracy_date).ToUniversalTime() : null
+                    date_expiration = Helper.parseDate(passwordObj.expiracy_date)
                 };
                 return await _passwordRepository.CreatePasswordAsync(newPassword);
             }
@@ -41,5 +37,30 @@ namespace AKM.Server.Library.Impl.Services
                 return false;
             }
         }
+
+
+        public async Task<bool> UpdatePasswordAsync(UpdatePasswordDTO passwordObj)
+        {
+            try
+            {
+                var existingPassword = await _passwordRepository.GetPasswordAsync(Guid.Parse(passwordObj.id));
+
+                if (existingPassword == null) return false;
+
+                existingPassword.id_app = passwordObj.app != null ? Guid.Parse(passwordObj.app) : existingPassword.id_app;
+                existingPassword.id_tag = passwordObj.tag != null ? Guid.Parse(passwordObj.tag) : existingPassword.id_tag;
+                existingPassword.password = passwordObj.password;
+                existingPassword.date_updated = DateTime.UtcNow;
+                existingPassword.date_expiration = Helper.parseDate(passwordObj.expiracy_date);
+
+                return await _passwordRepository.UpdatePasswordAsync(existingPassword);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UpdatePasswordAsync: {ex.Message}");
+                return false;
+            }
+        }
+
     }
 }

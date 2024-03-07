@@ -20,7 +20,7 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
 
         public async Task<TEntity?> GetById(Guid id) => await DbSet.FindAsync(id);
         public async Task<List<TEntity>?> GetByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.Where(predicate: condition).ToListAsync();
-        
+
         public async Task<bool> InsertAsync(TEntity entity)
         {
             try
@@ -32,6 +32,20 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in InsertAsync: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task<bool> UpdateAsync(TEntity entity)
+        {
+            try
+            {
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in UpdateAsync: {ex.Message}");
                 return false;
             }
         }

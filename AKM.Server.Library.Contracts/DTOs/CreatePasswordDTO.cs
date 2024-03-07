@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AKM.Server.Library.Contracts.DTOs
 {
-    public class CreatePassword
+    public class CreatePasswordDTO
     {
         public string user { get; set; }
         public string password { get; set; }

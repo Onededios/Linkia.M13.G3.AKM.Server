@@ -7,5 +7,7 @@ namespace AKM.Server.Infrastructure.Contracts.Repositories
     {
         DbSet<TEntity> DbSet { get; set; }
         Task<TEntity?> GetById(Guid id);
+        Task<bool> InsertAsync(TEntity entity);
+        Task<bool> UpdateAsync(TEntity entity);
     }
 }
