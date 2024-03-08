@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using AKM.Server.Infrastructure.Contracts.Entities;
 
 namespace AKM.Server.Infrastructure.Contracts.Repositories
 {
     public interface IAppRepository
     {
+        Task<List<App>?> GetAllAppsAsync();
     }
 }

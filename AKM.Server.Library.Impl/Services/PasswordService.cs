@@ -11,7 +11,6 @@ namespace AKM.Server.Library.Impl.Services
         private readonly IPasswordRepository _passwordRepository;
 
         public PasswordService(IPasswordRepository passwordRepository) => _passwordRepository = passwordRepository;
-
         public async Task<Password?> GetPasswordAsync(Guid id) => await _passwordRepository.GetPasswordAsync(id);
         public async Task<List<Password>?> GetPasswordsByUserAsync(Guid userId) => await _passwordRepository.GetPasswordsByUserAsync(userId);
         public async Task<bool> CreatePasswordAsync(CreatePasswordDTO passwordObj)

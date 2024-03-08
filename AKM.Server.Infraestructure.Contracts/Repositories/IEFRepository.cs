@@ -7,7 +7,7 @@ namespace AKM.Server.Infrastructure.Contracts.Repositories
     public interface IEFRepository<TEntity> where TEntity : Entity
     {
         DbSet<TEntity> DbSet { get; set; }
-        Task<TEntity?> GetById(Guid id);
+        Task<TEntity?> GetByIdAsync(Guid id);
         Task<List<TEntity>?> GetMultipleByConditionAsync(Expression<Func<TEntity, bool>> condition);
         Task<TEntity> GetByConditionAsync(Expression<Func<TEntity, bool>> condition);
         Task<bool> InsertAsync(TEntity entity);
