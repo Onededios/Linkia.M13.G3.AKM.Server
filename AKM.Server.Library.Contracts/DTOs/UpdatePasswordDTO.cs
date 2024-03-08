@@ -8,8 +8,8 @@ namespace AKM.Server.Library.Contracts.DTOs
 {
     public class UpdatePasswordDTO
     {
-        public string id { get; set; }
-        public string password { get; set; }
+        public required string id { get; set; }
+        public required string password { get; set; }
         public string? expiracy_date { get; set; }
         public string? app { get; set; }
         public string? tag { get; set; }

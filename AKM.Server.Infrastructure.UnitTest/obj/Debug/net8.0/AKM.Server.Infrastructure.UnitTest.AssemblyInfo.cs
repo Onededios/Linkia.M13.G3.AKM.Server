@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17a02a5e1a5bacb1bfc0c5a814a8bc41bfee1c62")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dabc04554463f16ed29e330b509703ae338ccd2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.Infrastructure.UnitTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

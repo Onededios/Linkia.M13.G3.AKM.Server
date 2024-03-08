@@ -9,7 +9,6 @@ namespace AKM.Server.Library.Impl.Services
     public class PasswordService : IPasswordService
     {
         private readonly IPasswordRepository _passwordRepository;
-        private readonly DateTime lastAvailableDate = DateTime.Parse("9999/12/31");
 
         public PasswordService(IPasswordRepository passwordRepository) => _passwordRepository = passwordRepository;
 
@@ -32,7 +31,7 @@ namespace AKM.Server.Library.Impl.Services
                 };
                 return await _passwordRepository.CreatePasswordAsync(newPassword);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return false;
             }
@@ -55,10 +54,9 @@ namespace AKM.Server.Library.Impl.Services
 
                 return await _passwordRepository.UpdatePasswordAsync(existingPassword);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-                Console.WriteLine($"Error in UpdatePasswordAsync: {ex.Message}");
-                return false;
+               return false;
             }
         }
 

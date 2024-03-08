@@ -1,4 +1,6 @@
-﻿using System;
+﻿using AKM.Server.Infrastructure.Contracts.Entities;
+using AKM.Server.Library.Contracts.DTOs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +10,7 @@ namespace AKM.Server.Library.Contracts.Services
 {
     public interface ISignService
     {
-        Task GoSignIn(string username, string password);
+        Task<User?> SignIn(SignInDTO signInObj);
+        Task<bool> SignUp(SignUpDTO signUpObj);
     }
 }

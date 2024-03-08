@@ -11,8 +11,11 @@ namespace AKM.Server.Infrastructure.Impl.Context
         private readonly IConfiguration _configuration;
 
         public DbSet<Password> passwords { get; set; }
+        public DbSet<User> users { get; set; }
+        public DbSet<App> apps { get; set; }
+        public DbSet<Tag> tags { get; set; }
 
-        public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration, bool isRelationalDb = true)
+        public DatabaseContext(DbContextOptions<DatabaseContext> options, IConfiguration configuration, bool isRelationalDb = true) : base(options)
         {
             _isRelationalDb = isRelationalDb;
             _configuration = configuration;
@@ -29,7 +32,7 @@ namespace AKM.Server.Infrastructure.Impl.Context
                 var connectionString = _configuration.GetConnectionString("PostgreSQLConnection");
                 optionsBuilder.UseNpgsql(connectionString);
             }
-            optionsBuilder.LogTo(message => Debug.WriteLine(message));
+            optionsBuilder.LogTo(Console.WriteLine);
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

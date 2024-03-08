@@ -19,7 +19,9 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
         }
 
         public async Task<TEntity?> GetById(Guid id) => await DbSet.FindAsync(id);
-        public async Task<List<TEntity>?> GetByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.Where(predicate: condition).ToListAsync();
+        public async Task<List<TEntity>?> GetMultipleByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.Where(predicate: condition).ToListAsync();
+
+        public async Task<TEntity> GetByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.SingleOrDefaultAsync(predicate: condition);
 
         public async Task<bool> InsertAsync(TEntity entity)
         {

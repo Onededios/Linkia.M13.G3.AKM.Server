@@ -9,8 +9,8 @@ namespace AKM.Server.Library.Contracts.DTOs
 {
     public class CreatePasswordDTO
     {
-        public string user { get; set; }
-        public string password { get; set; }
+        public required string user { get; set; }
+        public required string password { get; set; }
         public string? expiracy_date { get; set; }
         public string? app { get; set; }
         public string? tag {  get; set; }

@@ -25,10 +25,10 @@ namespace AKM.Server.WebApi.Controllers
             try
             {
                 var response = await _passwordService.GetPasswordAsync(password);
-                if (response == null) throw new Exception("Password is null");
+                if (response == null) return BadRequest("Password is null");
                 return Ok(response);
             }
-            catch (Exception ex) { return Problem(detail: ex.Message, statusCode: 400); }
+            catch (Exception) { return StatusCode((int)HttpStatusCode.InternalServerError); }
         }
 
         [HttpGet]
@@ -41,7 +41,7 @@ namespace AKM.Server.WebApi.Controllers
         {
             try { 
                 var response = await _passwordService.GetPasswordsByUserAsync(user);
-                if (response == null) throw new Exception("User is null");
+                if (response == null) return BadRequest("User is null");
                 return Ok(response);
             }
             catch (Exception)
@@ -56,7 +56,7 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> GoCreatePassword([FromBody] CreatePasswordDTO request)
+        public async Task<IActionResult> GoCreatePassword(CreatePasswordDTO request)
         {
             try {
                 var result = await _passwordService.CreatePasswordAsync(request);
@@ -75,7 +75,7 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> GoModifyPassword([FromBody] UpdatePasswordDTO request)
+        public async Task<IActionResult> GoModifyPassword(UpdatePasswordDTO request)
         {
             try {
                 var result = await _passwordService.UpdatePasswordAsync(request);
