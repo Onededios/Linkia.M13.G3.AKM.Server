@@ -9,6 +9,20 @@ CREATE TABLE users (
     telephone TEXT NOT NULL
 ); 
 
+CREATE TABLE history_users (
+    id UUID PRIMARY KEY,
+    id_user UUID REFERENCES users(id),
+    first_name VARCHAR(25),
+    last_name VARCHAR(45),
+    email VARCHAR(45),
+    username VARCHAR(20),
+    password TEXT,
+    country_code TEXT,
+    telephone TEXT,
+    date_update TIMESTAMP,
+    date_creation TIMESTAMP
+);
+
 CREATE TABLE apps (
     id UUID PRIMARY KEY, 
     name VARCHAR(45) NOT NULL, 
@@ -25,12 +39,20 @@ CREATE TABLE passwords (
     id UUID PRIMARY KEY, 
     id_user UUID REFERENCES users(id), 
     id_app UUID REFERENCES apps(id), 
-    id_tag UUID REFERENCES tags(id),
     password TEXT,
-    date_creation TIMESTAMP, 
-    date_expiration TIMESTAMP, 
-    date_updated TIMESTAMP 
+    description TEXT,
+    date_expiration TIMESTAMP
 ); 
+
+CREATE TABLE history_passwords ( 
+    id  UUID PRIMARY KEY,
+    id_password UUID REFERENCES passwords(id),
+    password TEXT,
+    description_modification TEXT,
+    date_expiration TIMESTAMP,
+    date_update TIMESTAMP,
+    date_creation TIMESTAMP
+);
 
 CREATE TABLE alerts (
     id UUID PRIMARY KEY, 
@@ -40,22 +62,8 @@ CREATE TABLE alerts (
     date_alert TIMESTAMP 
 );
 
-CREATE TABLE apps_has_tags ( 
-    id_app UUID REFERENCES apps(id), 
-    id_tag UUID REFERENCES tags(id),
-    PRIMARY KEY (id_app, id_tag)
-);
-
 CREATE TABLE passwords_has_tags ( 
     id_password UUID REFERENCES passwords(id), 
     id_tag UUID REFERENCES tags(id),
-    PRIMARY KEY (id_password, id_tag)
-);
-
-CREATE TABLE history_passwords ( 
-    id  UUID PRIMARY KEY,
-    id_password UUID REFERENCES passwords(id),
-    update_date TIMESTAMP,
-    description_modification TEXT,
-    old_password TEXT
+    UNIQUE (id_password, id_tag)
 );

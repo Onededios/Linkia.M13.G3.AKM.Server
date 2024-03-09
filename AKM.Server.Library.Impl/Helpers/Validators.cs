@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AKM.Server.Library.Impl.Helpers
+﻿namespace AKM.Server.Library.Impl.Helpers
 {
-    internal class Validators
+    public class Validators
     {
+        public static bool isValidUpdateDTO(Object obj)
+        {
+            var idProperty = obj.GetType().GetProperty("id");
+            var idValue = idProperty?.GetValue(obj);
+
+            return idValue == null || obj.GetType().GetProperties().All(prop => prop.GetValue(obj) == null);
+        }
     }
 }

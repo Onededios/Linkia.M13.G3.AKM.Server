@@ -1,6 +1,10 @@
-INSERT INTO users VALUES 
-    ('e8a32b14-99c5-4e82-a9c1-9c80ed45f234', 'John', 'Doe', 'john.doe@example.com', 'john_doe', 'hashed_password_1', '+1', '1234567890'),
-    ('49df529a-9b52-4d0a-b9e2-6e45c09f8765', 'Jane', 'Smith', 'jane.smith@example.com', 'jane_smith', 'hashed_password_2', '+44', '9876543210');
+INSERT INTO users VALUES
+  ('bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', 'John', 'Doe', 'john.doe@email.com', 'johndoe', 'password123', '+1', '1234567890'),
+  ('ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', 'Jane', 'Smith', 'jane.smith@email.com', 'janesmith', 'securepass', '+44', '9876543210');
+
+INSERT INTO history_users VALUES
+  ('1e72b729-6201-4ee9-85bf-8ed816019a5a', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', 'John', 'Doe', 'john.doe@email.com', 'johndoe', 'password123', '+1', '1234567890', '2024-03-09 12:30:00', '2023-01-15 08:45:00'),
+  ('b1cb848c-2dcb-4ad0-b7a2-afe36a530187', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', 'Jane', 'Smith', 'jane.smith@email.com', 'janesmith', 'securepass', '+44', '9876543210', '2024-03-09 10:15:00', '2023-02-20 14:20:00');
 
 INSERT INTO apps VALUES 
     ('94eabf25-57d0-4c5b-9c21-f7221bdcbb82', 'Instagram', 'instagram_icon_url'),
@@ -23,26 +27,32 @@ INSERT INTO apps VALUES
     ('8b9c1d2e-3f4a-5b6c-7d8e-9f1a2c3d4b5e', 'TikTok', 'tiktok_icon_url'),
     ('1d2e3f4a-5b6c-7d8e-9f1a-2c3d4b5e6f7a', 'Duolingo', 'duolingo_icon_url');
 
-INSERT INTO tags VALUES 
-    ('e00730a4-d9ef-4a48-88d8-21b7f34b3543', 'Tag1', 'e8a32b14-99c5-4e82-a9c1-9c80ed45f234'),
-    ('9e74324f-0bc2-45f2-82e4-570aa1d44a2d', 'Tag2', '49df529a-9b52-4d0a-b9e2-6e45c09f8765');
+INSERT INTO tags VALUES
+  ('3ffed1f5-3e34-41a2-bbd3-617d023ad861', 'Work', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3'),
+  ('47ef44e9-8280-4b02-a8e1-4ce610557f5d', 'Personal', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f');
 
-INSERT INTO passwords VALUES 
-    ('5d5275b1-6538-4f3a-8cf2-09a0d9c442c5', 'e8a32b14-99c5-4e82-a9c1-9c80ed45f234', '63a9f66b-8be4-4b15-a5e0-6a71a97ba9d9', 'e00730a4-d9ef-4a48-88d8-21b7f34b3543', 'password123', '2024-03-06', '2025-03-06', '2024-03-06'),
-    ('947b1a4a-6e3d-4c42-9c94-b73d1c93a3bf', '49df529a-9b52-4d0a-b9e2-6e45c09f8765', '94eabf25-57d0-4c5b-9c21-f7221bdcbb82', '9e74324f-0bc2-45f2-82e4-570aa1d44a2d', 'securepass456', '2024-03-06', '2025-03-06', '2024-03-06');
+INSERT INTO passwords VALUES
+  ('52e03ea3-d5cc-4592-924f-9a9f843a7528', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', '94eabf25-57d0-4c5b-9c21-f7221bdcbb82', 'wordpass123', 'Office document', '2024-06-30 18:00:00'),
+  ('f99526cd-49a9-4d35-93b1-110bf4a2da6d', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', '7d3d82dc-1bc7-4f0d-9a30-2a461ca328f1', 'excel@2023', 'Financial data', '2024-04-15 10:30:00');
 
-INSERT INTO apps_has_tags VALUES 
-    ('63a9f66b-8be4-4b15-a5e0-6a71a97ba9d9', 'e00730a4-d9ef-4a48-88d8-21b7f34b3543'),
-    ('94eabf25-57d0-4c5b-9c21-f7221bdcbb82', '9e74324f-0bc2-45f2-82e4-570aa1d44a2d');
+INSERT INTO history_passwords VALUES
+  ('aa09aaac-1727-4e61-8582-158b5b7d4ac0', '52e03ea3-d5cc-4592-924f-9a9f843a7528', 'wordpass123', 'Updated password strength', '2024-06-30 18:00:00', '2024-03-09 14:45:00', '2024-03-09 14:30:00'),
+  ('b9be7a32-1e06-4604-aa92-c4f06674fc76', 'f99526cd-49a9-4d35-93b1-110bf4a2da6d', 'excel@2023', 'Changed for security reasons', '2024-04-15 10:30:00', '2024-03-09 11:20:00', '2024-03-09 11:15:00');
 
-INSERT INTO passwords_has_tags VALUES 
-    ('5d5275b1-6538-4f3a-8cf2-09a0d9c442c5', 'e00730a4-d9ef-4a48-88d8-21b7f34b3543'),
-    ('947b1a4a-6e3d-4c42-9c94-b73d1c93a3bf', '9e74324f-0bc2-45f2-82e4-570aa1d44a2d');
+INSERT INTO alerts VALUES
+  ('dd1b120a-7fb4-415c-960e-738c52502b0b', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', '52e03ea3-d5cc-4592-924f-9a9f843a7528', 'Password expiring soon', '2024-06-25 15:00:00'),
+  ('69a94a79-6c98-43e7-9c8b-27ce5a0eef20', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', 'f99526cd-49a9-4d35-93b1-110bf4a2da6d', 'Security alert: Account access', '2024-04-10 08:30:00');
 
-INSERT INTO history_passwords VALUES 
-    ('9648c3e0-654f-4a8e-8a4b-27a98a5a4f6c', '5d5275b1-6538-4f3a-8cf2-09a0d9c442c5', '2024-03-06', 'Updated password', 'old_password123'),
-    ('6e8b5654-df8d-4b3d-b5c9-94c48a22e136', '947b1a4a-6e3d-4c42-9c94-b73d1c93a3bf', '2024-03-06', 'Password change', 'old_securepass456');
-
-INSERT INTO alerts VALUES 
-    ('ed0e8b29-cd61-4d3b-b4b1-9a6b2c9e7ab2', 'e8a32b14-99c5-4e82-a9c1-9c80ed45f234', '5d5275b1-6538-4f3a-8cf2-09a0d9c442c5', 'Password expiring soon!', '2024-03-05'),
-    ('ed05a79b-af22-41e2-8e7d-10a70e34514d', '49df529a-9b52-4d0a-b9e2-6e45c09f8765', '947b1a4a-6e3d-4c42-9c94-b73d1c93a3bf', 'Security alert: unusual activity', '2024-03-07');
+INSERT INTO passwords_has_tags VALUES
+  ('52e03ea3-d5cc-4592-924f-9a9f843a7528', '3ffed1f5-3e34-41a2-bbd3-617d023ad861'),
+  ('f99526cd-49a9-4d35-93b1-110bf4a2da6d', '47ef44e9-8280-4b02-a8e1-4ce610557f5d');
+  
+ 
+ delete from history_users 
+ delete from tags
+ delete from passwords_has_tags 
+ delete from users
+ delete from history_passwords 
+ delete from passwords 
+ delete from apps
+ delete from alerts 

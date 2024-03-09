@@ -7,7 +7,7 @@ namespace AKM.Server.WebApi
     {
         public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration) => Configuration = configuration;
-        public void ConfigureServices(IServiceCollection services) 
+        public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DatabaseContext>((serviceProvider, options) =>
             {

@@ -12,7 +12,7 @@ namespace AKM.Server.WebApi.Controllers
     {
         private readonly IPasswordService _passwordService;
 
-        public PasswordController (IPasswordService passwordService) => _passwordService = passwordService;
+        public PasswordController(IPasswordService passwordService) => _passwordService = passwordService;
 
         [HttpGet]
         [Route("GetPassword")]
@@ -20,15 +20,15 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<ActionResult> GoGetPassword(Guid password)
+        public async Task<ActionResult> GoGetPassword(Guid id)
         {
             try
             {
-                var response = await _passwordService.GetPasswordAsync(password);
-                if (response == null) return BadRequest("Password is null");
-                return Ok(response);
+                var response = await _passwordService.GetPasswordAsync(id);
+                return response != null ? Ok(response) : BadRequest(response);
+
             }
-            catch (Exception) { return StatusCode((int)HttpStatusCode.InternalServerError); }
+            catch (Exception ex) { return StatusCode((int)HttpStatusCode.InternalServerError, ex); }
         }
 
         [HttpGet]
@@ -37,16 +37,17 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<ActionResult> GoGetUserPasswords(Guid user)
+        public async Task<ActionResult> GoGetUserPasswords(Guid id_user)
         {
-            try { 
-                var response = await _passwordService.GetPasswordsByUserAsync(user);
-                if (response == null) return BadRequest("User is null");
-                return Ok(response);
-            }
-            catch (Exception)
+            try
             {
-                return StatusCode((int)HttpStatusCode.InternalServerError);
+                var response = await _passwordService.GetPasswordsByUserAsync(id_user);
+                return response != null ? Ok(response) : BadRequest(response);
+
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex);
             }
         }
 
@@ -56,16 +57,16 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> GoCreatePassword(CreatePasswordDTO request)
+        public async Task<IActionResult> GoCreatePassword(PasswordCreateDTO request)
         {
-            try {
-                var result = await _passwordService.CreatePasswordAsync(request);
-                if (result) return Ok(result);
-                return BadRequest("Password creation failed");
-            }
-            catch (Exception)
+            try
             {
-                return StatusCode((int)HttpStatusCode.InternalServerError);
+                var response = await _passwordService.CreatePasswordAsync(request);
+                return response ? Ok(response) : BadRequest(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex);
             }
         }
 
@@ -75,16 +76,16 @@ namespace AKM.Server.WebApi.Controllers
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
         [Produces("application/json")]
-        public async Task<IActionResult> GoModifyPassword(UpdatePasswordDTO request)
+        public async Task<IActionResult> GoModifyPassword(PasswordUpdateDTO request)
         {
-            try {
-                var result = await _passwordService.UpdatePasswordAsync(request);
-                if (result) return Ok(result);
-                return BadRequest("Password update failed");
-            }
-            catch (Exception) 
+            try
             {
-                return StatusCode((int)HttpStatusCode.InternalServerError);
+                var response = await _passwordService.UpdatePasswordAsync(request);
+                return response ? Ok(response) : BadRequest(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex);
             }
         }
 

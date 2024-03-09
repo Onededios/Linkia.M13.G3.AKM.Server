@@ -1,7 +1,6 @@
 ﻿using AKM.Server.Infrastructure.Contracts.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Diagnostics;
 
 namespace AKM.Server.Infrastructure.Impl.Context
 {
@@ -26,7 +25,7 @@ namespace AKM.Server.Infrastructure.Impl.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            
+
             if (_isRelationalDb)
             {
                 var connectionString = _configuration.GetConnectionString("PostgreSQLConnection");

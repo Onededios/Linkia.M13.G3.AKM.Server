@@ -4,20 +4,19 @@ using AKM.Server.Infrastructure.Impl.Repositories;
 using AKM.Server.Library.Contracts.Services;
 using AKM.Server.Library.Impl.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddScoped<IPasswordService, PasswordService>();
-builder.Services.AddScoped<ISignService, SignService>();
+builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ITagService, TagService>();
 builder.Services.AddScoped<IAppService, AppService>();
 
 // Add repositories to the container
 builder.Services.AddScoped<IPasswordRepository, PasswordRepository>();
-builder.Services.AddScoped<ISignRepository, SignRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<ITagRepository, TagRepository>();
 builder.Services.AddScoped<IAppRepository, AppRepository>();
 
