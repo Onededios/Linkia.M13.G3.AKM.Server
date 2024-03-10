@@ -1,0 +1,29 @@
+@startuml
+:User: as U
+
+frame "Presentation" {
+[Android Client] as AC
+}
+
+frame "Domain" {
+[.net Api Rest] as AR
+[Translator] as Tra
+[Model] as Mod
+[Repository] as Repo
+}
+
+frame "Data" {
+database "Database" {
+[PostgreSQL DB] as PSQL
+}
+}
+
+U <-down-> AC
+
+AC <-down-> AR: HTTP Request
+AR <-> Tra
+Tra <-> Mod
+AR <--> Repo
+Repo <--> PSQL
+
+@enduml

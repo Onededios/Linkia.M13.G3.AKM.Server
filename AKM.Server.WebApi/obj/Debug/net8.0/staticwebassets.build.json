@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "FX8QI9hD9hnuSGQFnF+i3q/YcpV2EvczCPE4V6+8YDw=",
+  "Source": "AKM.Server.WebApi",
+  "BasePath": "_content/AKM.Server.WebApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\AKM.Server.WebApi.props" />
+</Project>

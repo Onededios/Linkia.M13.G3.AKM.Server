@@ -1,107 +1,69 @@
-
-CREATE TABLE users ( 
-
-    id_user UUID PRIMARY KEY, 
-
-    user_name VARCHAR(45) NOT NULL, 
-
-    email VARCHAR(45) NOT NULL UNIQUE, 
-
-    password_hash TEXT NOT NULL UNIQUE 
-
+CREATE TABLE users (
+    id UUID PRIMARY KEY,
+    first_name VARCHAR(25) NOT NULL,
+    last_name VARCHAR(45) NOT NULL,
+    email VARCHAR(45) NOT NULL UNIQUE,
+    username VARCHAR(20) NOT NULL UNIQUE,
+    password TEXT NOT NULL,
+    country_code TEXT NOT NULL,
+    telephone TEXT NOT NULL
 ); 
 
-CREATE TABLE apps ( 
+CREATE TABLE history_users (
+    id UUID PRIMARY KEY,
+    id_user UUID REFERENCES users(id),
+    first_name VARCHAR(25),
+    last_name VARCHAR(45),
+    email VARCHAR(45),
+    username VARCHAR(20),
+    password TEXT,
+    country_code TEXT,
+    telephone TEXT,
+    date_update TIMESTAMP,
+    date_creation TIMESTAMP
+);
 
-    id_app UUID PRIMARY KEY, 
-
-    name_app VARCHAR(45) NOT NULL, 
-
-    icon_svg TEXT, 
-
-    users_id_user UUID REFERENCES users(id_user) 
-
+CREATE TABLE apps (
+    id UUID PRIMARY KEY, 
+    name VARCHAR(45) NOT NULL, 
+    icon TEXT
 ); 
+
+CREATE TABLE tags ( 
+    id UUID PRIMARY KEY,
+    name VARCHAR(45) NOT NULL,
+    id_user UUID REFERENCES users(id) 
+);
 
 CREATE TABLE passwords ( 
-
-    id_password UUID PRIMARY KEY, 
-
-    id_category UUID, 
-
-    id_user UUID REFERENCES users(id_user), 
-
-    id_app UUID REFERENCES apps(id_app), 
-
-    password TEXT, 
-
-    creation_date DATE, 
-
-    expiration_date DATE, 
-
-    last_update VARCHAR(45) 
-
+    id UUID PRIMARY KEY, 
+    id_user UUID REFERENCES users(id), 
+    id_app UUID REFERENCES apps(id), 
+    password TEXT,
+    description TEXT,
+    date_expiration TIMESTAMP
 ); 
-
-
-CREATE TABLE alerts ( 
-
-    id_alert UUID PRIMARY KEY, 
-
-    id_user UUID REFERENCES users(id_user), 
-
-    id_password UUID REFERENCES passwords(id_password), 
-
-    alert_message VARCHAR(45), 
-
-    alert_date DATE 
-
-); 
-
-  
-CREATE TABLE tags ( 
-
-    id_tag UUID PRIMARY KEY, 
-
-    name_tag VARCHAR(45) NOT NULL, 
-
-    users_id_user UUID REFERENCES users(id_user) 
-
-); 
-
-  
-CREATE TABLE apps_has_tags ( 
-
-    apps_id_app UUID REFERENCES apps(id_app), 
-
-    tags_id_tag UUID REFERENCES tags(id_tag), 
-
-    PRIMARY KEY (apps_id_app, tags_id_tag) 
-
-); 
-
-  
-CREATE TABLE passwords_has_tags ( 
-
-    passwords_id_password UUID REFERENCES passwords(id_password), 
-
-    tags_id_tag UUID REFERENCES tags(id_tag), 
-
-    PRIMARY KEY (passwords_id_password, tags_id_tag) 
-
-); 
-
 
 CREATE TABLE history_passwords ( 
+    id  UUID PRIMARY KEY,
+    id_password UUID REFERENCES passwords(id),
+    password TEXT,
+    description_modification TEXT,
+    date_expiration TIMESTAMP,
+    date_update TIMESTAMP,
+    date_creation TIMESTAMP
+);
 
-    id_history UUID PRIMARY KEY, 
+CREATE TABLE alerts (
+    id UUID PRIMARY KEY, 
+    id_user UUID REFERENCES users(id),
+    id_password UUID REFERENCES passwords(id), 
+    message VARCHAR(45), 
+    date_alert TIMESTAMP 
+);
 
-    id_password UUID REFERENCES passwords(id_password), 
-
-    update_date DATE, 
-
-    description_modification VARCHAR(45), 
-
-    old_password TEXT 
-
-); 
+CREATE TABLE passwords_has_tags ( 
+    id_password UUID REFERENCES passwords(id), 
+    id_tag UUID REFERENCES tags(id),
+    UNIQUE (id_password, id_tag)
+);
