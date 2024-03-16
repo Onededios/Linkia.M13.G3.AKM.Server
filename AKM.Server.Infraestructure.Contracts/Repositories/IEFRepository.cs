@@ -12,5 +12,6 @@ namespace AKM.Server.Infrastructure.Contracts.Repositories
         Task<TEntity> GetByConditionAsync(Expression<Func<TEntity, bool>> condition);
         Task<bool> InsertAsync(TEntity entity);
         Task<bool> UpdateAsync(TEntity entity);
+        Task<bool> CheckAttrAsync(Expression<Func<TEntity, bool>> condition);
     }
 }

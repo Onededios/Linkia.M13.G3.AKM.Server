@@ -8,6 +8,6 @@
         public required string username { get; set; }
         public required string password { get; set; }
         public required string telephone { get; set; }
-        public required string county_code { get; set; }
+        public required string country_code { get; set; }
     }
 }

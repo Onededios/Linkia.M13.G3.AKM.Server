@@ -30,7 +30,7 @@ namespace AKM.Server.Library.Impl.Services
                     password = dto.password,
                     email = dto.email,
                     telephone = dto.telephone,
-                    country_code = dto.county_code
+                    country_code = dto.country_code
                 };
                 return await _userRepository.CreateUserAsync(newUser);
             }
@@ -49,11 +49,14 @@ namespace AKM.Server.Library.Impl.Services
                 existingUser.email = dto.email != null ? dto.email : existingUser.email;
                 existingUser.password = dto.password != null ? dto.password : existingUser.password;
                 existingUser.telephone = dto.telephone != null ? dto.telephone : existingUser.telephone;
-                existingUser.country_code = dto.county_code != null ? dto.county_code : existingUser.country_code;
+                existingUser.country_code = dto.country_code != null ? dto.country_code : existingUser.country_code;
 
                 return await _userRepository.UpdateUserAsync(existingUser);
             }
             catch (Exception) { return false; }
         }
+
+        public async Task<bool> SearchMailAsync(string inp) => await _userRepository.CheckMailAsync(inp);
+        public async Task<bool> SearchUsernameAsync(string inp) => await _userRepository.CheckUsernameAsync(inp);
     }
 }

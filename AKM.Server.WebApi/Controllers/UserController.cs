@@ -60,5 +60,35 @@ namespace AKM.Server.WebApi.Controllers
             }
             catch (Exception ex) { return StatusCode((int)HttpStatusCode.InternalServerError, ex); }
         }
+
+        [HttpGet]
+        [Route("UsernameExists")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [Produces("application/json")]
+        public async Task<ActionResult> GoCheckUsername(string username)
+        {
+            try
+            {
+                return Ok(await _userService.SearchUsernameAsync(username));
+            }
+            catch (Exception ex) { return StatusCode((int)HttpStatusCode.InternalServerError, ex); }
+        }
+
+        [HttpGet]
+        [Route("MailExists")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        [Produces("application/json")]
+        public async Task<ActionResult> GoCheckMail(string mail)
+        {
+            try
+            {
+                return Ok(await _userService.SearchMailAsync(mail));
+            }
+            catch (Exception ex) { return StatusCode((int)HttpStatusCode.InternalServerError, ex); }
+        }
     }
 }

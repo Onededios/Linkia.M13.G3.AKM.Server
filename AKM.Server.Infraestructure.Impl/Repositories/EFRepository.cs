@@ -24,6 +24,8 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
 
         public async Task<TEntity> GetByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.SingleOrDefaultAsync(predicate: condition);
 
+        public async Task<bool> CheckAttrAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.AnyAsync(predicate: condition);
+
         public async Task<bool> InsertAsync(TEntity entity)
         {
             try
