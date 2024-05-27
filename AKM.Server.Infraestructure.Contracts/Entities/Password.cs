@@ -6,6 +6,7 @@ namespace AKM.Server.Infrastructure.Contracts.Entities
     public class Password : Entity
     {
         public Guid id {  get; set; }
+        public string alias { get; set; }
         [JsonIgnore]
         public Guid id_user { get; set; }
         [ForeignKey("id_app")]
@@ -14,6 +15,7 @@ namespace AKM.Server.Infrastructure.Contracts.Entities
         public IEnumerable<string>? tags { get => tagsInfo?.Select(tag => tag.name); }
         [JsonIgnore]
         public IEnumerable<Tag>? tagsInfo { get; set; }
+        public string username { get; set; }
         public string password { get; set; }
         public string? description { get; set; }
         public DateTime? date_expiration { get; set; }

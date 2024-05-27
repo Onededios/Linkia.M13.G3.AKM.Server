@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.Library.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+829a80a0f6ee93483e6137d117974a9049ba2030")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b04ef6899b21590fbee7c53cf2cc9765bca1cf6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.Library.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.Library.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
