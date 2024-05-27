@@ -1,4 +1,6 @@
-﻿namespace AKM.Server.Infrastructure.Contracts.Entities
+﻿using System.Text.Json.Serialization;
+
+namespace AKM.Server.Infrastructure.Contracts.Entities
 {
     public class App : Entity
     {

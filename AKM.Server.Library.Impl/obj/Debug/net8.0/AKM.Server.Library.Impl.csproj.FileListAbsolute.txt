@@ -11,8 +11,8 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.S
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.AssemblyInfo.cs
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.csproj.CoreCompileInputs.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.sourcelink.json
-C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.csproj.CopyComplete
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\refint\AKM.Server.Library.Impl.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Server.Library.Impl.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\ref\AKM.Server.Library.Impl.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl\obj\Debug\net8.0\AKM.Serv.2C628F5A.Up2Date

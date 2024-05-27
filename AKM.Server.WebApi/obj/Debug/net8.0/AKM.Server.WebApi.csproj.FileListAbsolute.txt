@@ -26,7 +26,6 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\staticwebas
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.AKM.Server.WebApi.props
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\staticwebassets.pack.json
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\scopedcss\bundle\AKM.Server.WebApi.styles.css
-C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\AKM.Server.WebApi.csproj.CopyComplete
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\AKM.Server.WebApi.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\refint\AKM.Server.WebApi.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\AKM.Server.WebApi.pdb
@@ -44,3 +43,4 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Impl.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Infrastructure.Impl.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\bin\Debug\net8.0\AKM.Server.Library.Impl.pdb
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi\obj\Debug\net8.0\AKM.Serv.1345C492.Up2Date

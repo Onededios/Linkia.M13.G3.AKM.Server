@@ -35,8 +35,19 @@ namespace AKM.Server.Infrastructure.Impl.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+            modelBuilder.Entity<Password>()
+                .HasMany(p => p.tagsInfo)
+                .WithMany(t => t.passwords)
+                .UsingEntity(
+                    "passwords_has_tags",
+                    r => r.HasOne(typeof(Tag)).WithMany().HasForeignKey("id_tag").HasPrincipalKey(nameof(Tag.id)),
+                    l => l.HasOne(typeof(Password)).WithMany().HasForeignKey("id_password").HasPrincipalKey(nameof(Password.id)),
+                    j => j.HasKey("id_password", "id_tag")
+                );
+
+
             base.OnModelCreating(modelBuilder);
-            modelBuilder.ApplyConfigurationsFromAssembly(typeof(DatabaseContext).Assembly);
         }
     }
 }

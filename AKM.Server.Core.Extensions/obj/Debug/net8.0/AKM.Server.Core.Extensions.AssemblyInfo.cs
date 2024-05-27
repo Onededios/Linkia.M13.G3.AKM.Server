@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.Core.Extensions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b537911d2d5d1a0194dcd52ea96ec7c1f050f415")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+829a80a0f6ee93483e6137d117974a9049ba2030")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.Core.Extensions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.Core.Extensions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
