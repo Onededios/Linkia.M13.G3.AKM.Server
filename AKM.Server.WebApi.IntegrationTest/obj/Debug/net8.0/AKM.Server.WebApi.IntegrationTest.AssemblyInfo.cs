@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("AKM.Server.WebApi.IntegrationTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+829a80a0f6ee93483e6137d117974a9049ba2030")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e6a9f78c50248e2c43129bbd9e13b30d758c6982")]
 [assembly: System.Reflection.AssemblyProductAttribute("AKM.Server.WebApi.IntegrationTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("AKM.Server.WebApi.IntegrationTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

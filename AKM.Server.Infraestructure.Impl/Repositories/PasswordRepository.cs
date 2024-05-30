@@ -12,17 +12,18 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
         {
             return await DbSet
                 .Include(p => p.app)
-                .Include(p => p.tagsInfo)
+                .Include(p => p.tags)
                 .FirstOrDefaultAsync(p => p.id == id);
         }
         public async Task<List<Password>?> GetPasswordsByUserAsync(Guid userId) 
         {
             return await DbSet.Where(p => p.id_user == userId)
                 .Include(p => p.app)
-                .Include(p => p.tagsInfo)
+                .Include(p => p.tags)
                 .ToListAsync();
         }
         public async Task<bool> CreatePasswordAsync(Password password) => await InsertAsync(password);
         public async Task<bool> UpdatePasswordAsync(Password password) => await UpdateAsync(password);
+        public async Task<bool> DeletePasswordAsync(Guid id) => await DeleteByIdAsync(id);
     }
 }

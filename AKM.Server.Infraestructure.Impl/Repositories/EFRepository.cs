@@ -54,5 +54,23 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
                 return false;
             }
         }
+
+        public async Task <bool> DeleteByIdAsync(Guid id)
+        {
+            try
+            {
+                var entity = await GetByIdAsync(id);
+                if (entity == null) return false;
+
+                DbSet.Remove(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in DeleteByIdAsync: {ex.Message}");
+                return false;
+            }
+        }
     }
 }

@@ -13,5 +13,6 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
         public async Task<bool> UpdateUserAsync(User user) => await UpdateAsync(user);
         public async Task<bool> CheckUsernameAsync(string inp) => await CheckAttrAsync(u => u.username == inp);
         public async Task<bool> CheckMailAsync(string inp) => await CheckAttrAsync(u => u.email == inp);
+        public async Task<User?> GetUserByIdAsync(Guid id) => await GetByIdAsync(id);
     }
 }

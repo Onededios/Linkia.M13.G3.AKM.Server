@@ -56,12 +56,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AKM.Server.Infrastructure.U
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05 - Database", "05 - Database", "{B13EAD40-9412-492C-B10E-F19042D04C87}"
 	ProjectSection(SolutionItems) = preProject
-		00_InitDB.sql = 00_InitDB.sql
 		AKM.Server.Database\Scripts\01_CreateAllTables.sql = AKM.Server.Database\Scripts\01_CreateAllTables.sql
 		AKM.Server.Database\Scripts\02_InsertSampleData.sql = AKM.Server.Database\Scripts\02_InsertSampleData.sql
 		03_CreateFunctions.sql = 03_CreateFunctions.sql
-		AKM.Server.Database\commands.md = AKM.Server.Database\commands.md
 		04_CreateTriggers.sql = 04_CreateTriggers.sql
+		AKM.Server.Database\commands.md = AKM.Server.Database\commands.md
 	EndProjectSection
 EndProject
 Global

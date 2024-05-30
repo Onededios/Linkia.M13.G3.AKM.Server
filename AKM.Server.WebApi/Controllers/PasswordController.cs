@@ -89,5 +89,22 @@ namespace AKM.Server.WebApi.Controllers
             }
         }
 
+        [HttpDelete]
+        [Route("DeletePassword")]
+        [ProducesResponseType((int)HttpStatusCode.OK)]
+        [ProducesResponseType((int)HttpStatusCode.BadRequest)]
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        public async Task<IActionResult> GoDeletePassword(Guid id)
+        {
+            try
+            {
+                var response = await _passwordService.DeletePasswordAsync(id);
+                return response ? Ok(response) : BadRequest(response);
+            }
+            catch (Exception ex)
+            {
+                return StatusCode((int)HttpStatusCode.InternalServerError, ex);
+            }
+        }
     }
 }
