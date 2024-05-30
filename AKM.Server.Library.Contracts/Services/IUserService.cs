@@ -8,5 +8,7 @@ namespace AKM.Server.Library.Contracts.Services
         Task<User?> SignInAsync(UserSignInDTO signInObj);
         Task<bool> SignUpAsync(UserSignUpDTO signUpObj);
         Task<bool> UpdateUserAsync(UserUpdateDTO userUpdateObj);
+        Task<bool> SearchMailAsync(string inp);
+        Task<bool> SearchUsernameAsync(string inp);
     }
 }

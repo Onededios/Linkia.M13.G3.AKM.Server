@@ -39,6 +39,8 @@ CREATE TABLE passwords (
     id UUID PRIMARY KEY, 
     id_user UUID REFERENCES users(id), 
     id_app UUID REFERENCES apps(id), 
+    alias TEXT,
+    username TEXT,
     password TEXT,
     description TEXT,
     date_expiration TIMESTAMP

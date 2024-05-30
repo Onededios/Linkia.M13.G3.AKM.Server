@@ -104,9 +104,9 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\ne
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.AssemblyInfo.cs
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.csproj.CoreCompileInputs.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.sourcelink.json
-C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.csproj.CopyComplete
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\refint\AKM.Server.WebApi.IntegrationTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Server.WebApi.IntegrationTest.genruntimeconfig.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\ref\AKM.Server.WebApi.IntegrationTest.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.WebApi.IntegrationTest\obj\Debug\net8.0\AKM.Serv.1D1CA5A5.Up2Date

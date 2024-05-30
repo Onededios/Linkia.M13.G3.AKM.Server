@@ -8,5 +8,7 @@ namespace AKM.Server.Infrastructure.Contracts.Repositories
         Task<bool> CreateUserAsync(User user);
         Task<bool> UpdateUserAsync(User user);
         Task<User?> GetUserAsync(Guid id);
+        Task<bool> CheckUsernameAsync(string inp);
+        Task<bool> CheckMailAsync(string inp);
     }
 }

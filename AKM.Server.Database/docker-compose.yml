@@ -1,0 +1,12 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: akmDB
+    environment:
+      POSTGRES_USER: akmDBRoot
+      POSTGRES_PASSWORD: akmDBRoot
+      POSTGRES_DB: akmDB
+    volumes:
+      - ./Scripts:/docker-entrypoint-initdb.d
+    ports:
+      - "5432:5432"

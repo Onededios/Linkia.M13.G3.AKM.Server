@@ -8,5 +8,6 @@ namespace AKM.Server.Infrastructure.Contracts.Repositories
         Task<List<Password>?> GetPasswordsByUserAsync(Guid userId);
         Task<bool> CreatePasswordAsync(Password password);
         Task<bool> UpdatePasswordAsync(Password password);
+        Task<bool> DeletePasswordAsync(Guid id);
     }
 }

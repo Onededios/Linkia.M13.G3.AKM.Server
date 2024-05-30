@@ -104,9 +104,9 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\n
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.AssemblyInfo.cs
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.csproj.CoreCompileInputs.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.sourcelink.json
-C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.csproj.CopyComplete
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\refint\AKM.Server.Infrastructure.UnitTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Server.Infrastructure.UnitTest.genruntimeconfig.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\ref\AKM.Server.Infrastructure.UnitTest.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Infrastructure.UnitTest\obj\Debug\net8.0\AKM.Serv.71EA1B46.Up2Date

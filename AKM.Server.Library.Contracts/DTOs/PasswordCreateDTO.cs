@@ -1,11 +1,15 @@
-﻿namespace AKM.Server.Library.Contracts.DTOs
+﻿using AKM.Server.Infrastructure.Contracts.Entities;
+
+namespace AKM.Server.Library.Contracts.DTOs
 {
     public class PasswordCreateDTO
     {
-        public required string user { get; set; }
-        public string? app { get; set; }
-        public required string password { get; set; }
+        public Guid userId {  get; set; }
+        public string? alias { get; set; }
+        public Guid? appId { get; set; }
+        public string? username { get; set; }
+        public string password { get; set; }
+        public IEnumerable<Guid>? tags { get; set; }
         public string? description { get; set; }
-        public string? expiracy_date { get; set; }
     }
 }

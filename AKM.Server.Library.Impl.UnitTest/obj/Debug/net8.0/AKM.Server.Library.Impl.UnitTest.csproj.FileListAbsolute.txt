@@ -104,9 +104,9 @@ C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.AssemblyInfo.cs
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.csproj.CoreCompileInputs.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.sourcelink.json
-C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.csproj.CopyComplete
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\refint\AKM.Server.Library.Impl.UnitTest.dll
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.pdb
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Server.Library.Impl.UnitTest.genruntimeconfig.cache
 C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\ref\AKM.Server.Library.Impl.UnitTest.dll
+C:\repos\Linkia.M13.G3.AKM.Server\AKM.Server.Library.Impl.UnitTest\obj\Debug\net8.0\AKM.Serv.9AB62D6F.Up2Date

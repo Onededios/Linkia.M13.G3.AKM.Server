@@ -24,6 +24,8 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
 
         public async Task<TEntity> GetByConditionAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.SingleOrDefaultAsync(predicate: condition);
 
+        public async Task<bool> CheckAttrAsync(Expression<Func<TEntity, bool>> condition) => await DbSet.AnyAsync(predicate: condition);
+
         public async Task<bool> InsertAsync(TEntity entity)
         {
             try
@@ -49,6 +51,24 @@ namespace AKM.Server.Infrastructure.Impl.Repositories
             catch (Exception ex)
             {
                 Console.WriteLine($"Error in UpdateAsync: {ex.Message}");
+                return false;
+            }
+        }
+
+        public async Task <bool> DeleteByIdAsync(Guid id)
+        {
+            try
+            {
+                var entity = await GetByIdAsync(id);
+                if (entity == null) return false;
+
+                DbSet.Remove(entity);
+                await _context.SaveChangesAsync();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error in DeleteByIdAsync: {ex.Message}");
                 return false;
             }
         }
