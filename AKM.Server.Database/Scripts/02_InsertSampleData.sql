@@ -31,10 +31,10 @@ INSERT INTO apps VALUES
 
 -- Insertar tags asegurándose de que cada usuario tenga sus propios tags
 INSERT INTO tags VALUES
-  ('3ffed1f5-3e34-41a2-bbd3-617d023ad861', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', 'Work'),
-  ('47ef44e9-8280-4b02-a8e1-4ce610557f5d', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', 'Personal'),
-  ('55a34e1d-5b8d-4f0b-90e8-5a8c1f4e1a23', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3', 'ProjectX'),
-  ('65b24f2e-6c8e-4f1b-80f9-6b9d5c7f5b34', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f', 'Vacation');
+  ('3ffed1f5-3e34-41a2-bbd3-617d023ad861', 'Work', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3'),
+  ('47ef44e9-8280-4b02-a8e1-4ce610557f5d', 'Personal', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f'),
+  ('55a34e1d-5b8d-4f0b-90e8-5a8c1f4e1a23', 'ProjectX', 'bda7a2b2-152a-4eb8-af92-54b82e9d8ec3'),
+  ('65b24f2e-6c8e-4f1b-80f9-6b9d5c7f5b34', 'Vacation', 'ac04f417-7b35-4ef9-87fb-33b9e0f3e38f');
 
 -- Insertar contraseñas
 INSERT INTO passwords VALUES
