@@ -35,6 +35,19 @@ namespace AKM.Server.Infrastructure.Impl.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<User>(entity => 
+            { 
+                entity.HasKey(e => e.id); 
+                entity.Property(e => e.first_name).IsRequired().HasMaxLength(25); 
+                entity.Property(e => e.last_name).IsRequired().HasMaxLength(45); 
+                entity.Property(e => e.email).IsRequired().HasMaxLength(45); 
+                entity.HasIndex(e => e.email).IsUnique(); 
+                entity.Property(e => e.username).IsRequired().HasMaxLength(20); 
+                entity.HasIndex(e => e.username).IsUnique(); 
+                entity.Property(e => e.password).IsRequired(); 
+                entity.Property(e => e.country_code).IsRequired(); 
+                entity.Property(e => e.telephone).IsRequired(); 
+            });
 
             modelBuilder.Entity<Password>(entity =>
             {
